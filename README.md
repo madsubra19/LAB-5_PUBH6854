@@ -97,7 +97,12 @@ snakemake --cores 1 2>&1 | tee evidence/04_partial_run.txt
 | `evidence/04_partial_run.txt` | the actual partial re-run: 3 of 3 steps done, `clean_messy_data` skipped |
 | `evidence/rulegraph.png`, `evidence/dag.png` | the workflow DAG |
 
+## Outputs
 
+- `data/processed/clean_samples.csv`: structured samples table (60 samples)
+- `output/feature_table.tsv`: one row per patient, with clinical fields and
+  mutation counts for TP53, KRAS, EGFR, STK11 and KEAP1 (566 patients)
+- `output/report/summary_report.md` + `summary_figure.png`: summary report.
 
-
-
+## AI Usage
+Please look at [AI_usage.md](AI_usage.md).

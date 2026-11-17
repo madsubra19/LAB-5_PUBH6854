@@ -1,8 +1,8 @@
-#Lab 5 AI Usage
+# Lab 5 AI Usage
 Model: Claude
 AI was utilized for creating the Snakefile and make_report.py 
 
-#Prompts  used
+## Prompts  used
 1. Creating the Snakefile
 I gave Claude both the `clean_messy_data.R` script and the `build_feature_table.py` files
 that were used in Labs 3 and 4 respectively and asked it to 

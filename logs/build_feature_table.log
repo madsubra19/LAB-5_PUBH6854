@@ -1,0 +1,6 @@
+clinical: 566 rows, 566 patients
+mutations (long): 700 rows, 457 patients
+samples with no mutation calls: 4 -> ['TCGA-64-1678', 'TCGA-69-8453', 'TCGA-78-7143', 'TCGA-86-A4D0']
+mutations (wide): 457 rows
+merged: 566 rows, 566 patients
+Successfully generated output/feature_table.tsv with shape (566, 11)

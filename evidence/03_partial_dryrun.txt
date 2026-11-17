@@ -1,0 +1,65 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-17 15:44:30
+  Workflow ID: 4f543904-319e-4a5a-95f4-b2170271eb6f
+  Platform: macOS-14.6-arm64-arm-64bit
+  Host: Madhans-MacBook-Air.local
+  User: madhansubramanian
+  Snakemake version: 9.24.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]
+  Command: /Users/madhansubramanian/.local/share/mamba/envs/week10/bin/snakemake -n
+  Snakefile: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854/Snakefile
+  Base directory: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854
+  Run directory: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854
+  Working directory: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Job stats:
+job                    count
+-------------------  -------
+build_feature_table        1
+summary_report             1
+all                        1
+total                      3
+
+
+[Tue Nov 17 15:44:30 2026]
+rule build_feature_table:
+    input: data/cohort.db, scripts/build_feature_table.py
+    output: output/feature_table.tsv
+    log: logs/build_feature_table.log
+    jobid: 2
+    reason: Updated input files: scripts/build_feature_table.py
+    resources: tmpdir=/var/folders/0j/rzm7hc655fjggb01nfjqm1k00000gn/T
+[Tue Nov 17 15:44:30 2026]
+rule summary_report:
+    input: data/processed/clean_samples.csv, output/feature_table.tsv, scripts/make_report.py
+    output: output/report/summary_report.md, output/report/summary_figure.png
+    log: logs/summary_report.log
+    jobid: 3
+    reason: Input files updated by another job: output/feature_table.tsv
+    resources: tmpdir=/var/folders/0j/rzm7hc655fjggb01nfjqm1k00000gn/T
+[Tue Nov 17 15:44:30 2026]
+rule all:
+    input: data/processed/clean_samples.csv, output/feature_table.tsv, output/report/summary_report.md, output/report/summary_figure.png
+    jobid: 0
+    reason: Input files updated by another job: output/report/summary_figure.png, output/feature_table.tsv, output/report/summary_report.md
+    resources: tmpdir=/var/folders/0j/rzm7hc655fjggb01nfjqm1k00000gn/T
+Job stats:
+job                    count
+-------------------  -------
+build_feature_table        1
+summary_report             1
+all                        1
+total                      3
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        all, summary_report
+    updated input files:
+        build_feature_table
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.

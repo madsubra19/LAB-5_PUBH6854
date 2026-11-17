@@ -1,0 +1,246 @@
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.1     ✔ readr     2.2.0
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.3     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package ‘tibble’ was built under R version 4.4.3 
+2: package ‘tidyr’ was built under R version 4.4.3 
+3: package ‘readr’ was built under R version 4.4.3 
+4: package ‘lubridate’ was built under R version 4.4.3 
+Bioconductor version '3.20' is out-of-date; the current release version '3.23'
+  is available with R version '4.6'; see https://bioconductor.org/install
+Warning message:
+package ‘BiocManager’ was built under R version 4.4.3 
+Loading required package: BiocGenerics
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:lubridate’:
+
+    intersect, setdiff, union
+
+The following objects are masked from ‘package:dplyr’:
+
+    combine, intersect, setdiff, union
+
+The following objects are masked from ‘package:stats’:
+
+    IQR, mad, sd, var, xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, aperm, append, as.data.frame, basename, cbind,
+    colnames, dirname, do.call, duplicated, eval, evalq, Filter, Find,
+    get, grep, grepl, intersect, is.unsorted, lapply, Map, mapply,
+    match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rownames, sapply, saveRDS, setdiff,
+    table, tapply, union, unique, unsplit, which.max, which.min
+
+Loading required package: S4Vectors
+Loading required package: stats4
+
+Attaching package: ‘S4Vectors’
+
+The following objects are masked from ‘package:lubridate’:
+
+    second, second<-
+
+The following objects are masked from ‘package:dplyr’:
+
+    first, rename
+
+The following object is masked from ‘package:tidyr’:
+
+    expand
+
+The following object is masked from ‘package:utils’:
+
+    findMatches
+
+The following objects are masked from ‘package:base’:
+
+    expand.grid, I, unname
+
+Loading required package: IRanges
+
+Attaching package: ‘IRanges’
+
+The following object is masked from ‘package:lubridate’:
+
+    %within%
+
+The following objects are masked from ‘package:dplyr’:
+
+    collapse, desc, slice
+
+The following object is masked from ‘package:purrr’:
+
+    reduce
+
+Loading required package: XVector
+
+Attaching package: ‘XVector’
+
+The following object is masked from ‘package:purrr’:
+
+    compact
+
+Loading required package: GenomeInfoDb
+
+Attaching package: ‘Biostrings’
+
+The following object is masked from ‘package:base’:
+
+    strsplit
+
+Warning message:
+There were 2 warnings in `mutate()`.
+The first warning was:
+ℹ In argument: `dob = case_when(...)`.
+Caused by warning:
+!  25 failed to parse.
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning. 
+# A tibble: 60 × 9
+   sample_id dob        dob_raw sex   enrollment_site glucose_value glucose_unit
+   <chr>     <chr>      <chr>   <chr> <chr>                   <dbl> <chr>       
+ 1 S0001     1962-07-09 07/09/… fema… Site A                   75.4 mg/dL       
+ 2 S0002     1974-12-16 12/16/… male  Site A                  120   mg/dL       
+ 3 S0003     1953-11-24 11.24.… fema… Site B                   84.2 mg/dL       
+ 4 S0004     1975-12-18 12/18/… fema… Site B                  120   mg/dL       
+ 5 S0005     1997-12-02 1997-1… male  Site A                  248.  mg/dL       
+ 6 S0006     1955-12-09 1955-1… fema… Site B                  141.  mmol/L      
+ 7 S0007     1969-09-04 1969-0… unkn… Site A                  225   mg/dL       
+ 8 S0008     1997-06-21 21-Jun… male  Site A                  193.  mg/dL       
+ 9 S0009     2018-05-11 2018-0… fema… Site A                  222.  mg/dL       
+10 S0010     1951-10-01 10/01/… fema… Site C                  215.  mg/dL       
+11 S0011     1997-10-16 1997-1… male  Site B                   99.7 mmol/L      
+12 S0012     2008-04-21 21-Apr… unkn… Site B                   NA   mg/dL       
+13 S0013     2006-08-14 08/14/… <NA>  Site A                  225.  mg/dL       
+14 S0014     1986-07-09 1986-0… fema… Site B                  134.  mmol/L      
+15 S0015     1980-06-10 06/10/… fema… Site B                  151.  mmol/L      
+16 S0016     1998-07-01 07/01/… fema… Site C                  112.  mmol/L      
+17 S0017     1973-10-17 10.17.… male  Site C                  249.  mmol/L      
+18 S0018     2002-05-30 05.30.… <NA>  Site B                   84.4 mg/dL       
+19 S0019     2005-07-26 07/26/… unkn… Site B                  164.  mg/dL       
+20 S0020     2017-06-15 06/15/… male  Site B                  249.  mg/dL       
+21 S0021     1964-02-26 02.26.… male  Site C                  188.  mg/dL       
+22 S0022     1959-08-09 1959-0… male  Site A                  199.  mg/dL       
+23 S0023     1974-10-28 10/28/… male  Site A                  185.  mg/dL       
+24 S0024     2011-12-30 2011-1… male  Site B                  170.  mmol/L      
+25 S0025     1972-05-21 05/21/… fema… Site C                  143.  mg/dL       
+26 S0026     2016-01-30 30-Jan… unkn… Site C                  202.  mg/dL       
+27 S0027     1991-04-19 19-Apr… male  Site C                  111   mg/dL       
+28 S0028     1985-11-09 09-Nov… male  Site A                  102.  mg/dL       
+29 S0029     1960-05-17 05.17.… fema… Site C                  148.  mg/dL       
+30 S0030     1976-12-10 10-Dec… unkn… Site C                  123.  mg/dL       
+31 S0031     1986-06-07 06/07/… male  Site B                  211.  mg/dL       
+32 S0032     2009-07-23 23-Jul… fema… Site C                  112.  mg/dL       
+33 S0033     1956-07-14 07.14.… unkn… Site B                  105   mmol/L      
+34 S0034     2012-06-07 06.07.… male  Site C                   91.8 mg/dL       
+35 S0035     1995-04-15 04.15.… unkn… Site C                  225.  mmol/L      
+36 S0036     1956-12-13 13-Dec… fema… Site A                  231.  mg/dL       
+37 S0037     1998-09-06 09.06.… <NA>  Site C                  146.  mg/dL       
+38 S0038     1987-08-05 1987-0… unkn… Site B                  157.  mmol/L      
+39 S0039     1997-12-02 12/02/… unkn… Site C                   74.9 mmol/L      
+40 S0040     2018-04-17 04.17.… male  Site C                  146.  mg/dL       
+41 S0041     2008-06-21 06/21/… male  Site A                  221.  mg/dL       
+42 S0042     1965-01-20 01/20/… male  Site A                  174.  mg/dL       
+43 S0043     2006-04-10 2006-0… fema… Site A                  223.  mg/dL       
+44 S0044     1980-08-12 08/12/… unkn… Site A                  148   mg/dL       
+45 S0045     1998-04-13 04.13.… unkn… Site C                  177.  mg/dL       
+46 S0046     2009-12-12 12.12.… <NA>  Site C                  128.  mmol/L      
+47 S0047     1967-02-21 02/21/… fema… Site B                  170.  mg/dL       
+48 S0048     2012-01-24 2012-0… male  Site A                  155.  mg/dL       
+49 S0049     1960-10-28 1960-1… fema… Site B                  241.  mg/dL       
+50 S0050     1976-07-30 1976-0… fema… Site A                  197.  mg/dL       
+51 S0051     1951-02-06 06-Feb… unkn… Site A                  103.  mg/dL       
+52 S0052     2011-08-02 08/02/… male  Site B                  241.  mg/dL       
+53 S0053     1989-09-20 20-Sep… unkn… Site B                   80.8 mg/dL       
+54 S0054     1956-09-25 1956-0… male  Site C                  177.  mg/dL       
+55 S0055     2006-01-28 2006-0… unkn… Site A                  187.  mg/dL       
+56 S0056     2011-10-14 14-Oct… unkn… Site B                   NA   mmol/L      
+57 S0057     1958-03-12 1958-0… male  Site C                  218.  mg/dL       
+58 S0058     1989-02-08 02.08.… fema… Site B                  130   mg/dL       
+59 S0059     1957-11-25 25-Nov… male  Site C                  143.  mg/dL       
+60 S0060     2006-02-09 02.09.… male  Site B                   93.6 mg/dL       
+# ℹ 2 more variables: glucose_flag <chr>, unit_suspect <lgl>
+
+ female    male unknown    <NA> 
+     18      23      15       4 
+
+Site A Site B Site C 
+    19     21     20 
+        
+         FALSE TRUE
+  mg/dL     47    0
+  mmol/L     0   13
+
+asterisk  missing     <NA> 
+       2        2       56 
+[1] 0
+[1] "1951-02-06" "2018-05-11"
+# A tibble: 14 × 3
+   sample_id dob_raw  dob       
+   <chr>     <chr>    <chr>     
+ 1 S0003     11.24.53 1953-11-24
+ 2 S0017     10.17.73 1973-10-17
+ 3 S0018     05.30.02 2002-05-30
+ 4 S0021     02.26.64 1964-02-26
+ 5 S0029     05.17.60 1960-05-17
+ 6 S0033     07.14.56 1956-07-14
+ 7 S0034     06.07.12 2012-06-07
+ 8 S0035     04.15.95 1995-04-15
+ 9 S0037     09.06.98 1998-09-06
+10 S0040     04.17.18 2018-04-17
+11 S0045     04.13.98 1998-04-13
+12 S0046     12.12.09 2009-12-12
+13 S0058     02.08.89 1989-02-08
+14 S0060     02.09.06 2006-02-09
+character(0)
+# A tibble: 3 × 3
+  sample_id length_reported length_actual
+  <chr>               <int>         <int>
+1 S001                  120           120
+2 S003                  150           157
+3 S005                  130           144
+# A tibble: 8 × 6
+  sample_id organism     gene  length_reported length_actual note        
+  <chr>     <chr>        <chr>           <int>         <int> <chr>       
+1 S001      Homo sapiens BRCA1             120           120 <NA>        
+2 S002      Homo sapiens TP53               NA           134 <NA>        
+3 S003      Homo sapiens EGFR              150           157 <NA>        
+4 S004      Homo sapiens BRCA1              NA           104 <NA>        
+5 S005      Homo sapiens TP53              130           144 <NA>        
+6 S006      Homo sapiens EGFR               NA           125 <NA>        
+7 S007      Homo sapiens BRCA1              NA           135 re-sequenced
+8 S008      Homo sapiens TP53               NA           123 <NA>        
+
+Homo sapiens 
+           8 
+
+BRCA1  EGFR  TP53 
+    3     2     3 
+[1] 60
+       sample_id     patient_name              dob              sex 
+     "character"      "character"      "character"      "character" 
+ enrollment_site            notes redraw_requested    glucose_mg_dL 
+     "character"      "character"        "logical"        "numeric" 
+  glucose_mmol_L     glucose_flag 
+       "numeric"      "character" 
+       sample_id     patient_name              dob              sex 
+               0                0                0                4 
+ enrollment_site            notes redraw_requested    glucose_mg_dL 
+               0               55                0               14 
+  glucose_mmol_L     glucose_flag 
+              48               56 
+
+asterisk  missing     <NA> 
+       2        2       56 
+[1] 46
+[1] 12

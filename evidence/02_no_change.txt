@@ -1,0 +1,20 @@
+
+SNAKEMAKE
+=========
+  Date: 2026-11-17 15:44:29
+  Workflow ID: 19102858-2465-474e-8ed2-7ea7a803c169
+  Platform: macOS-14.6-arm64-arm-64bit
+  Host: Madhans-MacBook-Air.local
+  User: madhansubramanian
+  Snakemake version: 9.24.0
+  Python version: 3.12.16 (main, Oct 26 2026, 11:31:43) [Clang 21.1.8 ]
+  Command: /Users/madhansubramanian/.local/share/mamba/envs/week10/bin/snakemake -n
+  Snakefile: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854/Snakefile
+  Base directory: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854
+  Run directory: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854
+  Working directory: /Users/madhansubramanian/Desktop/LAB-5_PUBH6854
+  Config file(s): []
+  Config MD5: 99914b932bd37a50b983c5e7c90ae93b
+
+Building DAG of jobs...
+Nothing to be done (all requested files are present and up to date).
